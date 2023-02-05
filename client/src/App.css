@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+.Opearentionable_Text_Style{
+  color:rgb(10, 207, 99);
+}
+.UnOpearentionable_Text_Style{
+  color:rgb(219, 50, 50);
+  white-space: pre-line
+}
+.dot {
+  z-index: -5000;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  height: 950px;
+  width: 950px;
+  border-radius: 50%;
+  display: inline-block;
+  background:linear-gradient(to right, #0038b8, #fff);
+  transform: translate(-50%, -50%);
+}
+
+.star-of-david {
+  z-index: -1;
+  --star-color: #4369c2;
+  --sqrt-3: 1.73205080757;
+  margin: 0;
+  font-size: 5em;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 5em solid transparent;
+  border-right: 5em solid transparent;
+  border-bottom: calc(5em * var(--sqrt-3)) solid var(--star-color);
+
+}
+
+.star-of-david:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -5em;
+  top: calc(5em * var(--sqrt-3) / 3);
+  border-left: 5em solid transparent;
+  border-right: 5em solid transparent;
+  border-top: calc(5em * var(--sqrt-3)) solid var(--star-color);
+}
+
+body {
+  background:linear-gradient(to left, #0038b8, #fff);
+  height: 100vh;
+}
