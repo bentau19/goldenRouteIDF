@@ -115,8 +115,8 @@ return (
 
     {      
   // Conditional rendering to show the result of weather check
-    // Check if the first character of `hours` is 'c' or 'l' to show connection_errors or loading
-    hours[0] === "c" || hours[0] === "l" ? 
+    // Check if the first character of `hours` is 'c' or 'l' or 'e' to show connection_errors or loading
+    hours[0] === "c" || hours[0] === "l" || hours[0] === "e"  ? 
         // If yes, render a paragraph with the contents of `hours`
         <p>{hours}</p>
         // If not, check if `opearentionable` is truthy
