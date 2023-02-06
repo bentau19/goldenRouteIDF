@@ -49,7 +49,7 @@ const weatherCheck = async(counter = 1) => {
     }
 
     // Check if hours is an empty string
-    if (hours === "" && counter !=3) {
+    if (hours === "" && counter !==3) {
       // If it is, call the weatherCheck function again
       weatherCheck(counter++);
     } else {

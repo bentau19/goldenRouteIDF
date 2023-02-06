@@ -38,9 +38,10 @@ def requests_weather(url, counter=1):
 
     try:
         # Make API request and add timeout value with retry counter
-        response = requests.get(url, timeout=(0.25 + (counter * 0.25)))
+        response = requests.get(url, timeout=(0.25 + (counter * 0.15)))
         return response
     except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout) as e:
+        print("was here")
         # Retry request on connection or read timeout error
         return requests_weather(url, counter + 1)
     except Exception as g:
