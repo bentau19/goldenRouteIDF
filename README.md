@@ -1,5 +1,5 @@
 # goldenRouteIDF
- to start this app you need to folow the next steps:
+ to start this app you need to follow the next steps:
  1) make sure you start your docker
  2) open the cmd and point it to the direction which the file you read now is in 
  3) write "docker-compose up"
