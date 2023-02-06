@@ -8,4 +8,4 @@
  6) enjoy!!!
 
 # answer to the quistions
-is in the נתיב הזהב.docx
+it is in the נתיב הזהב.docx
