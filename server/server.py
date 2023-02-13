@@ -116,11 +116,12 @@ def receive_input():
     try:
         number = int(load_mass)
     except:
-        number = -8
+        return jsonify(ERROR_CODE)
     # if result is not found in the database
     result = physics_calc.general_calc(number)
     # save the result to the database
-    db_save(result, load_mass)
+    if result != ERROR_CODE:
+        db_save(result, load_mass)
     # return the result
     return jsonify(result)
 
