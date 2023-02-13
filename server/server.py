@@ -113,8 +113,12 @@ def receive_input():
         # return the take_off_time, take_off_distance, and overweight
         return jsonify(db_result.take_off_time, db_result.take_off_distance,
                        db_result.overweight)
+    try:
+        number = int(load_mass)
+    except:
+        number = -8
     # if result is not found in the database
-    result = physics_calc.general_calc(int(load_mass))
+    result = physics_calc.general_calc(number)
     # save the result to the database
     db_save(result, load_mass)
     # return the result
